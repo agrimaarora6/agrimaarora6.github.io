@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nailora offers luxurious, hand-crafted press-on nails for every occasion. Discover custom designs that bring style to your nails.">
+    <meta name="keywords" content="press-on nails, luxury nails, custom nails, Nailora, hand-crafted nails">
+    <title>Nailora | Luxurious Press-On Nails</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="nailora-logo.png" alt="Nailora Logo">
+        </div>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="fade-in">Your Nails, Your Style</h1>
+            <p class="fade-in delay-1s">Luxurious, hand-crafted Press-On Nails for every occasion.</p>
+            <a href="#shop" class="btn-primary fade-in delay-2s">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="slide-in">About Me</h2>
+        <p class="slide-in delay-1s">Hi, I'm Agrima the CEO of nailora! I offer a unique range of hand-crafted Press-On Nails designed to make YOU stand out. My premium nails come in various shapes, lengths and designs, ensuring there's something for everyone.</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <h2 class="slide-in">Gallery</h2>
+        <div class="gallery-grid">
+            <img src="nail1.jpg" alt="Luxurious press-on nail design in blush pink with rhinestones" class="zoom-in">
+            <img src="nail2.jpg" alt="Chic almond-shaped press-on nails in pastel blue" class="zoom-in">
+            <img src="nail3.jpg" alt="Classic French tip press-on nails" class="zoom-in">
+            <img src="nail4.jpg" alt="Bold red and black geometric nail art" class="zoom-in">
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section class="shop" id="shop">
+        <h2 class="slide-in">Shop My Collection</h2>
+        <p class="fade-in">Explore my latest collections of custom-designed press-on nails, perfect for any event.</p>
+        <a href="shop.html" class="btn-secondary zoom-in">View Collection</a>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What My Customers Say</h2>
+        <div class="testimonial">
+            <p>"nailora's Press-On Nails are stunning! I wore them for my birthday and they were perfect!"</p>
+            <span>- Zainah A.</span>
+        </div>
+        <div class="testimonial">
+            <p>"I love how easy it is to apply nailora nails and the designs are absolutely beautiful!"</p>
+            <span>- Karishma T.</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/YOUR-EMAIL" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Nailora | Crafted with love and luxury.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/__nailora/">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=100091988810186">Facebook</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Toggle the mobile navigation menu
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close the menu when a link is clicked
+        document.querySelectorAll('.nav-links li a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

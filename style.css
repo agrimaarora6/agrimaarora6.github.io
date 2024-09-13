@@ -1,0 +1,381 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('optimized-hero.webp') no-repeat center center/cover;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 100px; /* Added padding to push the content down */
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    padding: 12px 30px;
+    background-color: #FFD700;
+    color: #7D1128;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1rem;
+
+}
+
+.btn-primary:hover {
+    background-color: #7D1128;
+    color: #FFD700;
+    transform: scale(1.05);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links li a {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #7D1128;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #FFD700;
+    transform: scale(1.05);
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Mobile Navigation */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links.active li {
+    margin: 15px 0;
+    text-align: center;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #FFC1CC;
+    color: #7D1128;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.about p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Shop Section */
+.shop {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    color: #7D1128;
+}
+
+.shop h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.shop p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-secondary {
+    padding: 12px 30px;
+    background-color: #7D1128;
+    color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #FFD700;
+    color: #7D1128;
+    transform: scale(1.05);
+}
+
+/* Shop Section */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust width as needed */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.shop-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.shop-item:hover {
+    transform: scale(1.05);
+}
+
+.shop-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.shop-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.shop-item p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 20px;
+    background-color: #FFC1CC;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #7D1128;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #7D1128;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #7D1128;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact button {
+    padding: 12px 30px;
+    background-color: #FFD700;
+    color: #7D1128;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact button:hover {
+    background-color: #7D1128;
+    color: #FFD700;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    padding: 30px;
+    background-color: #7D1128;
+    color: #fff;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 1.2rem;
+    color: #FFD700;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links.active {
+        display: flex;
+        z-index: 999;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#contact {
+    padding-top: 80px; /* Adjust this value to match your header's height */
+    margin-top: -80px; /* Negative margin to offset the padding */
+}
+
