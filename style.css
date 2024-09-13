@@ -379,3 +379,53 @@ html {
     margin-top: -80px; /* Negative margin to offset the padding */
 }
 
+/* Shop Collection Section */
+.shop-collection {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    color: #7D1128;
+}
+
+.shop-collection h2 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 30px;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.shop-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.shop-item:hover {
+    transform: scale(1.05);
+}
+
+.shop-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.shop-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.shop-item p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
